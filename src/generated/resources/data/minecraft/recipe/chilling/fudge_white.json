@@ -1,9 +1,8 @@
 {
   "type": "extradelight:chiller",
-  "consumeContainer": true,
   "container": {
     "count": 1,
-    "id": "extradelight:tray"
+    "id": "extradelight:sheet"
   },
   "cookingtime": 400,
   "experience": 0.35,

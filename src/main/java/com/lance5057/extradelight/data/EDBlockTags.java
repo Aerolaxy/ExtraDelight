@@ -40,8 +40,7 @@ public class EDBlockTags extends BlockTagsProvider {
 				ExtraDelightBlocks.FRUIT_LOG.get(), ExtraDelightBlocks.STRIPPED_FRUIT_LOG.get(),
 				ExtraDelightBlocks.CINNAMON_WOOD.get(), ExtraDelightBlocks.FRUIT_WOOD.get(),
 				ExtraDelightBlocks.STRIPPED_CINNAMON_WOOD.get(), ExtraDelightBlocks.STRIPPED_FRUIT_WOOD.get());
-		tag(BlockTags.LEAVES).add(ExtraDelightBlocks.CINNAMON_LEAVES.get(), ExtraDelightBlocks.HAZELNUT_LEAVES.get(),
-				ExtraDelightBlocks.APPLE_LEAVES.get());
+		tag(BlockTags.LEAVES).add(ExtraDelightBlocks.CINNAMON_LEAVES.get(), ExtraDelightBlocks.HAZELNUT_LEAVES.get());
 		tag(BlockTags.MINEABLE_WITH_AXE).add(ExtraDelightBlocks.DRYING_RACK.get(),
 				ExtraDelightBlocks.FOOD_DISPLAY.get(), ExtraDelightBlocks.DOUGH_SHAPING.get(),
 				ExtraDelightBlocks.MIXING_BOWL.get());
@@ -109,7 +108,6 @@ public class EDBlockTags extends BlockTagsProvider {
 				ExtraDelightBlocks.PUMPKIN_PIE.get(), ExtraDelightBlocks.PUMPKIN_ROLL.get(),
 				ExtraDelightBlocks.APPLE_CHEESECAKE.get(), ExtraDelightBlocks.COFFEE_CAKE.get(),
 				ExtraDelightBlocks.MILK_TART.get(), ExtraDelightBlocks.CHOCOLATE_CAKE.get(),
-				ExtraDelightBlocks.TARTE_TATIN.get(),
 
 				// Feasts in bowls
 				ExtraDelightBlocks.SALISBURY_STEAK_FEAST.get(), ExtraDelightBlocks.MASHED_POTATO_GRAVY.get(),
@@ -124,7 +122,6 @@ public class EDBlockTags extends BlockTagsProvider {
 				ExtraDelightBlocks.PUNCH.get(), ExtraDelightBlocks.BROWNIES.get(), ExtraDelightBlocks.BLONDIES.get(),
 				ExtraDelightBlocks.FUDGE.get(), ExtraDelightBlocks.CRISP_RICE_TREATS.get(),
 				ExtraDelightBlocks.SCOTCHAROOS.get(), ExtraDelightBlocks.BLACK_FOREST_TRIFLE.get(),
-				ExtraDelightBlocks.STUFFED_APPLES_FEAST.get(),
 
 				// Feasts on plates
 				ExtraDelightBlocks.MEATLOAF_FEAST.get(), ExtraDelightBlocks.POT_ROAST_FEAST.get(),
@@ -132,7 +129,7 @@ public class EDBlockTags extends BlockTagsProvider {
 				ExtraDelightBlocks.BEEF_WELLINGTON.get(), ExtraDelightBlocks.HAGGIS.get(),
 				ExtraDelightBlocks.MINT_LAMB.get(), ExtraDelightBlocks.CHARCUTERIE_BOARD.get(),
 				ExtraDelightBlocks.CHRISTMAS_PUDDING.get(), ExtraDelightBlocks.MONKEY_BREAD.get(),
-				ExtraDelightBlocks.STICKY_TOFFEE_PUDDING.get(), ExtraDelightBlocks.PORK_AND_APPLES_FEAST.get(),
+				ExtraDelightBlocks.STICKY_TOFFEE_PUDDING.get(),
 
 				// Jellies (also plated)
 				ExtraDelightBlocks.JELLY_WHITE.get(), ExtraDelightBlocks.JELLY_ORANGE.get(),
@@ -152,7 +149,7 @@ public class EDBlockTags extends BlockTagsProvider {
 		tag(BlockTags.SMALL_FLOWERS).add(ExtraDelightBlocks.WILD_GINGER.get());
 
 		tag(BlockTags.MINEABLE_WITH_HOE).add(ExtraDelightBlocks.CINNAMON_LEAVES.get(),
-				ExtraDelightBlocks.HAZELNUT_LEAVES.get(), ExtraDelightBlocks.APPLE_LEAVES.get()
+				ExtraDelightBlocks.HAZELNUT_LEAVES.get()
 		);
 		tag(BlockTags.MINEABLE_WITH_AXE).add(ExtraDelightBlocks.CINNAMON_LOG.get(),
 				ExtraDelightBlocks.STRIPPED_CINNAMON_LOG.get(), ExtraDelightBlocks.CINNAMON_PLANKS.get(),
@@ -204,7 +201,7 @@ public class EDBlockTags extends BlockTagsProvider {
 		tag(BlockTags.WOODEN_DOORS).add(ExtraDelightBlocks.CINNAMON_DOOR.get(),
 				ExtraDelightBlocks.FRUIT_DOOR.get());
 		tag(BlockTags.SAPLINGS).add(ExtraDelightBlocks.CINNAMON_SAPLING.get(),
-				ExtraDelightBlocks.HAZELNUT_SAPLING.get(), ExtraDelightBlocks.APPLE_SAPLING.get());
+				ExtraDelightBlocks.HAZELNUT_SAPLING.get());
 
 		tag(ExtraDelightTags.COLD_SOURCES).add(Blocks.ICE, Blocks.BLUE_ICE, Blocks.FROSTED_ICE, Blocks.PACKED_ICE,
 					Blocks.SNOW_BLOCK, Blocks.POWDER_SNOW_CAULDRON);

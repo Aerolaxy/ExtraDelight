@@ -1,6 +1,5 @@
 {
   "type": "extradelight:oven",
-  "consumeContainer": false,
   "container": {
     "count": 1,
     "id": "extradelight:pie_dish"

@@ -231,26 +231,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "PORK_AND_APPLES": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:pork_and_apples"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "PORK_AND_APPLES_FEAST": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:pork_and_apples_feast"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "POT_ROAST": {
       "conditions": {
         "items": [
@@ -465,12 +445,6 @@
     ],
     [
       "BLOOD_CHOCOLATE_DIPPED_COFFEE_BEAN"
-    ],
-    [
-      "PORK_AND_APPLES_FEAST"
-    ],
-    [
-      "PORK_AND_APPLES"
     ]
   ],
   "sends_telemetry_event": true

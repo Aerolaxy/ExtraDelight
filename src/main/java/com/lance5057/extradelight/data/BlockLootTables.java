@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
 
 import com.lance5057.extradelight.ExtraDelightBlocks;
@@ -170,8 +169,8 @@ public class BlockLootTables extends BlockLootSubProvider {
 
 		this.dropOther(ExtraDelightBlocks.MEAT_PIE_BLOCK.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.MACARONI_CHEESE.get(), Items.AIR);
-		this.dropOther(ExtraDelightBlocks.HOTDISH.get(), ExtraDelightItems.SQUARE_PAN);
-		this.dropOther(ExtraDelightBlocks.LASAGNA.get(), ExtraDelightItems.SQUARE_PAN);
+		this.dropOther(ExtraDelightBlocks.HOTDISH.get(), Items.AIR);
+		this.dropOther(ExtraDelightBlocks.LASAGNA.get(), Items.AIR);
 
 		this.dropOther(ExtraDelightBlocks.BEEF_STEW.get(), Items.BOWL);
 		this.dropOther(ExtraDelightBlocks.CHICKEN_STEW.get(), Items.BOWL);
@@ -190,14 +189,14 @@ public class BlockLootTables extends BlockLootSubProvider {
 		crop(ExtraDelightBlocks.CORN_TOP.get(), ExtraDelightItems.UNSHUCKED_CORN.get(),
 				ExtraDelightItems.CORN_SEEDS.get(), lootitemcondition$builder2, 3.0f);
 
-		this.dropOther(ExtraDelightBlocks.CORNBREAD.get(), ModItems.SKILLET.get());
+		this.dropOther(ExtraDelightBlocks.CORNBREAD.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.CARAMEL_CHEESECAKE.get(), Items.AIR);
-		this.dropOther(ExtraDelightBlocks.CORN_PUDDING.get(), ExtraDelightItems.SQUARE_PAN);
+		this.dropOther(ExtraDelightBlocks.CORN_PUDDING.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.PUMPKIN_PIE.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.PUMPKIN_ROLL.get(), Items.AIR);
-		this.dropOther(ExtraDelightBlocks.APPLE_CRISP.get(), ExtraDelightItems.SQUARE_PAN);
+		this.dropOther(ExtraDelightBlocks.APPLE_CRISP.get(), Items.BOWL);
 		this.dropOther(ExtraDelightBlocks.STUFFING.get(), Items.BOWL);
-		this.dropOther(ExtraDelightBlocks.POTATO_AU_GRATIN.get(), ExtraDelightItems.SQUARE_PAN);
+		this.dropOther(ExtraDelightBlocks.POTATO_AU_GRATIN.get(), Items.BOWL);
 
 		this.dropSelf(ExtraDelightBlocks.FLOUR_SACK.get());
 		this.dropSelf(ExtraDelightBlocks.CORNMEAL_SACK.get());
@@ -235,8 +234,16 @@ public class BlockLootTables extends BlockLootSubProvider {
 					NORMAL_LEAVES_SAPLING_CHANCES);
 		});
 
-		this.createFruitLeavesDrop(ExtraDelightBlocks.HAZELNUT_LEAVES.get(), ExtraDelightBlocks.HAZELNUT_SAPLING.get(),
-				ExtraDelightItems.HAZELNUTS_IN_SHELL.get());
+		this.add(ExtraDelightBlocks.HAZELNUT_LEAVES.get(), (p_124101_) -> {
+			return createLeavesDrops(p_124101_, ExtraDelightBlocks.HAZELNUT_SAPLING.get(),
+					NORMAL_LEAVES_SAPLING_CHANCES)
+					.withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+							.when(LootItemBlockStatePropertyCondition
+									.hasBlockStateProperties(ExtraDelightBlocks.HAZELNUT_LEAVES.get())
+									.setProperties(StatePropertiesPredicate.Builder.properties()
+											.hasProperty(FruitLeafBlock.AGE, 3)))
+							.add(LootItem.lootTableItem(ExtraDelightItems.HAZELNUTS_IN_SHELL.get())));
+		});
 
 		this.dropSelf(ExtraDelightBlocks.APPLE_COOKIE_BLOCK.get());
 		this.dropSelf(ExtraDelightBlocks.CHOCOLATE_CHIP_COOKIE_BLOCK.get());
@@ -278,7 +285,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 
 		this.dropOther(ExtraDelightBlocks.WILD_GINGER.get(), ExtraDelightItems.GINGER.get());
 
-		this.dropOther(ExtraDelightBlocks.CINNAMON_ROLLS.get(), ExtraDelightItems.SQUARE_PAN);
+		this.dropOther(ExtraDelightBlocks.CINNAMON_ROLLS.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.MONKEY_BREAD.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.COFFEE_CAKE.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.MINT_LAMB.get(), Items.AIR);
@@ -463,8 +470,8 @@ public class BlockLootTables extends BlockLootSubProvider {
 		this.add(ExtraDelightBlocks.BLACK_CHOCOLATE_BOX.get(), p_248609_ -> this.createChocolateBoxDrop(p_248609_));
 		this.add(ExtraDelightBlocks.PURPLE_CHOCOLATE_BOX.get(), p_248609_ -> this.createChocolateBoxDrop(p_248609_));
 
-		this.dropOther(ExtraDelightBlocks.BROWNIES.get(), ExtraDelightItems.SQUARE_PAN);
-		this.dropOther(ExtraDelightBlocks.BLONDIES.get(), ExtraDelightItems.SQUARE_PAN);
+		this.dropOther(ExtraDelightBlocks.BROWNIES.get(), ExtraDelightItems.TRAY);
+		this.dropOther(ExtraDelightBlocks.BLONDIES.get(), ExtraDelightItems.TRAY);
 		this.dropOther(ExtraDelightBlocks.CHOCOLATE_CAKE.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.FUDGE.get(), ExtraDelightItems.TRAY);
 		this.dropOther(ExtraDelightBlocks.STICKY_TOFFEE_PUDDING.get(), Items.BOWL);
@@ -482,26 +489,6 @@ public class BlockLootTables extends BlockLootSubProvider {
 		this.dropSelf(ExtraDelightBlocks.GOLDEN_CARROT_CRATE.get());
 
 		this.add(ExtraDelightBlocks.JAR.get(), p_248609_ -> this.createJarDrop(p_248609_));
-
-		this.createFruitLeavesDrop(ExtraDelightBlocks.APPLE_LEAVES.get(), ExtraDelightBlocks.APPLE_SAPLING.get(),
-				Items.APPLE);
-		this.dropSelf(ExtraDelightBlocks.APPLE_SAPLING.get());
-		this.dropOther(ExtraDelightBlocks.PORK_AND_APPLES_FEAST.get(), Items.AIR);
-		this.dropOther(ExtraDelightBlocks.STUFFED_APPLES_FEAST.get(), Items.AIR);
-		this.add(ExtraDelightBlocks.TARTE_TATIN.get(), noDrop());
-	}
-
-	protected void createFruitLeavesDrop(Block leaves, Block sapling, Item fruit) {
-		this.add(leaves, (p_124101_) -> {
-			return createLeavesDrops(p_124101_, sapling,
-					NORMAL_LEAVES_SAPLING_CHANCES)
-					.withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
-							.when(LootItemBlockStatePropertyCondition
-									.hasBlockStateProperties(leaves)
-									.setProperties(StatePropertiesPredicate.Builder.properties()
-											.hasProperty(FruitLeafBlock.AGE, 3)))
-							.add(LootItem.lootTableItem(fruit)));
-		});
 	}
 
 	protected LootTable.Builder createChocolateBoxDrop(Block block) {

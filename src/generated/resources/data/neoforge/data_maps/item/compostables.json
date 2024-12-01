@@ -1,8 +1,5 @@
 {
   "values": {
-    "extradelight:apple_leaves": {
-      "chance": 0.2
-    },
     "extradelight:bad_food": {
       "chance": 1.0
     },

@@ -3,7 +3,6 @@ package com.lance5057.extradelight.integration.jei;
 import java.util.List;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
 import com.lance5057.extradelight.ExtraDelight;
@@ -102,12 +101,7 @@ public class JEIPlugin implements IModPlugin {
 		registry.addIngredientInfo(List.of(new ItemStack(ExtraDelightItems.COFFEE_CHERRIES.get())), VanillaTypes.ITEM_STACK,
 				Component.translatable(ExtraDelight.MOD_ID + ".jei.info.coffee"));
 		registry.addIngredientInfo(List.of(new ItemStack(ExtraDelightItems.HAZELNUT_SAPLING.get()),
-						new ItemStack(ExtraDelightItems.HAZELNUTS_IN_SHELL.get()),
-						new ItemStack(ExtraDelightItems.HAZELNUT_LEAVES.get())), VanillaTypes.ITEM_STACK,
-				Component.translatable(ExtraDelight.MOD_ID + ".jei.info.hazelnut"));
-		registry.addIngredientInfo(List.of(new ItemStack(ExtraDelightItems.APPLE_SAPLING.get()),
-						new ItemStack(Items.APPLE),
-						new ItemStack(ExtraDelightItems.APPLE_LEAVES.get())), VanillaTypes.ITEM_STACK,
+						new ItemStack(ExtraDelightItems.HAZELNUTS_IN_SHELL.get())), VanillaTypes.ITEM_STACK,
 				Component.translatable(ExtraDelight.MOD_ID + ".jei.info.hazelnut"));
 
 		List<ItemStack> hide = List.of(ExtraDelightItems.EASTER_EGG.get().getDefaultInstance());

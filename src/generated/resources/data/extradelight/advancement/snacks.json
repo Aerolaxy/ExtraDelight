@@ -1,16 +1,6 @@
 {
   "parent": "extradelight:food",
   "criteria": {
-    "apple_chips": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:apple_chips"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "bread_roll": {
       "conditions": {
         "items": [
@@ -181,9 +171,6 @@
     ],
     [
       "jerky"
-    ],
-    [
-      "apple_chips"
     ]
   ],
   "sends_telemetry_event": true

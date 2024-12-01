@@ -1091,27 +1091,6 @@ public class ItemModels extends ItemModelProvider {
 		forItem(ExtraDelightItems.MALLOW_POWDER, "mallow_root_powder");
 		forItem(ExtraDelightItems.GROUND_COFFEE, "ground_coffee");
 
-		forBlockItem(ExtraDelightItems.APPLE_LEAVES, modLoc("block/crops/fruit/apple/apple_leaves_stage0"));
-		forBlockItemFlat(ExtraDelightItems.APPLE_SAPLING, "crops/fruit/apple/apple_sapling");
-		forItem(ExtraDelightItems.ROMBOSSE, "rombosse");
-		forItem(ExtraDelightItems.APPLE_SLAW, "apple_slaw");
-		forBlockItem(ExtraDelightItems.PORK_AND_APPLES_FEAST,
-				ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "block/pork_apple_roast_stage0"));
-		forItem(ExtraDelightItems.PORK_AND_APPLES, "pork_apple_roast");
-		forItem(ExtraDelightItems.APPLE_CHIPS, "apple_chips");
-		forBlockItem(ExtraDelightItems.STUFFED_APPLES_FEAST,
-				ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "block/stuffed_apples_stage0"));
-		forItem(ExtraDelightItems.STUFFED_APPLE, "stuffed_apple");
-		forItem(ExtraDelightItems.STUFFED_APPLE_ICE_CREAM, "stuffed_apple_ice_cream");
-		forItem(ExtraDelightItems.MULLIGATAWNY_SOUP, "mulligatawny_soup");
-		getBuilder(ExtraDelightItems.TARTE_TATIN_IN_PAN.getId().getPath()).parent(new ModelFile.UncheckedModelFile(
-				ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "block/tarte_tatin")));
-		forBlockItem(ExtraDelightItems.TARTE_TATIN,
-				ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "block/tarte_tatin_stage0"));
-		forItem(ExtraDelightItems.TARTE_TATIN_SLICE, "tarte_tatin_slice");
-		forItem(ExtraDelightItems.AEBLEFLAESK, "aebleflaesk");
-		forItem(ExtraDelightItems.CANDY_BAR_SALAD, "candy_bar_salad");
-
 		AestheticBlocks.itemModel(this);
 	}
 

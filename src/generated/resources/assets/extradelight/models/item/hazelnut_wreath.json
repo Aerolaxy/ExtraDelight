@@ -1,6 +1,0 @@
-{
-  "parent": "extradelight:block/wreath",
-  "textures": {
-    "all": "extradelight:block/crops/fruit/hazelnut/hazelnut_leaves"
-  }
-}

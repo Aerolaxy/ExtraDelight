@@ -164,20 +164,5 @@ public class EDBiomeModifiers extends BaseDatapackRegistryProvider {
 						biomeModifier(ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "hazelnut_tree")),
 						new BiomeModifiers.AddFeaturesBiomeModifier(forest, hazelnutTreeHolderSet,
 								GenerationStep.Decoration.VEGETAL_DECORATION));
-
-				// Apple
-
-				HolderSet.Direct<PlacedFeature> appleTreeHolderSet = HolderSet
-						.direct(Holder.direct(new PlacedFeature(
-								Holder.direct(new ConfiguredFeature<>(ExtraDelightFeatures.PATCH_APPLE_TREE.get(),
-										ExtraDelightTreeFeatures.createAppleTree().build())),
-								List.of(RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
-										HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
-										BiomeFilter.biome()))));
-
-				context.register(
-						biomeModifier(ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "apple_tree")),
-						new BiomeModifiers.AddFeaturesBiomeModifier(forest, appleTreeHolderSet,
-								GenerationStep.Decoration.VEGETAL_DECORATION));
 			});
 }

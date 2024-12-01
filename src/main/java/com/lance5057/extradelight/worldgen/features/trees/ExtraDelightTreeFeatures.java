@@ -44,21 +44,8 @@ public class ExtraDelightTreeFeatures {
 				new TwoLayersFeatureSize(1, 0, 3));
 	}
 
-	public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE = ResourceKey.create(
-			Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "apple"));
-
-	public static TreeConfiguration.TreeConfigurationBuilder createAppleTree() {
-		return new TreeConfiguration.TreeConfigurationBuilder(
-				BlockStateProvider.simple(ExtraDelightBlocks.FRUIT_LOG.get()),
-				new StraightTrunkPlacer(2, 0, 2),
-				BlockStateProvider.simple(ExtraDelightBlocks.APPLE_LEAVES.get()),
-				new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
-				new TwoLayersFeatureSize(1, 0, 3));
-	}
-
 	public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> p_256317_) {
 		FeatureUtils.register(p_256317_, CINNAMON, Feature.TREE, createCinnamonTree().build());
 		FeatureUtils.register(p_256317_, HAZELNUT, Feature.TREE, createHazelnutTree().build());
-		FeatureUtils.register(p_256317_, APPLE, Feature.TREE, createAppleTree().build());
 	}
 }

@@ -1,7 +1,6 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
-	"render_type": "cutout",
 	"textures": {
 		"3": "extradelight:block/cornbread",
 		"4": "extradelight:block/cornmeal_crumbs",

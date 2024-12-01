@@ -21,16 +21,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "apple_slaw": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:apple_slaw"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "bacon cheeseburger": {
       "conditions": {
         "items": [
@@ -661,16 +651,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "mulligatawny_soup": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:mulligatawny_soup"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "mushroom and swiss burger": {
       "conditions": {
         "items": [
@@ -1283,12 +1263,6 @@
     ],
     [
       "pbj"
-    ],
-    [
-      "apple_slaw"
-    ],
-    [
-      "mulligatawny_soup"
     ]
   ],
   "sends_telemetry_event": true

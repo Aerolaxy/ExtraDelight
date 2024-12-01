@@ -491,16 +491,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "stuffed_apples": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:stuffed_apples_feast"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "stuffing": {
       "conditions": {
         "items": [
@@ -516,16 +506,6 @@
         "items": [
           {
             "items": "extradelight:sweet_berry_pie"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "tarte": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:tarte_tatin_in_pan"
           }
         ]
       },
@@ -711,12 +691,6 @@
     ],
     [
       "white_chocolate_fondue"
-    ],
-    [
-      "stuffed_apples"
-    ],
-    [
-      "tarte"
     ]
   ],
   "sends_telemetry_event": true

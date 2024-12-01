@@ -29,9 +29,6 @@ import com.lance5057.extradelight.items.jar.JarItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BlockItem;
@@ -41,12 +38,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SolidBucketItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemContainerContents;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.neoforged.neoforge.fluids.DispenseFluidContainer;
@@ -58,7 +53,6 @@ import vectorwing.farmersdelight.common.item.DrinkableItem;
 import vectorwing.farmersdelight.common.item.HotCocoaItem;
 import vectorwing.farmersdelight.common.item.MelonJuiceItem;
 import vectorwing.farmersdelight.common.item.MilkBottleItem;
-import vectorwing.farmersdelight.common.registry.ModItems;
 
 public class ExtraDelightItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExtraDelight.MOD_ID);
@@ -2047,52 +2041,4 @@ public class ExtraDelightItems {
 
 	public static final DeferredItem<Item> HAZELNUT_SPREAD_BOTTLE = ITEMS.register("hazelnut_spread_bottle",
 			() -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).food(EDFoods.HAZELNUT_SPREAD)));
-
-	public static final DeferredItem<Item> APPLE_LEAVES = ITEMS.register("apple_leaves",
-			() -> new BlockItem(ExtraDelightBlocks.APPLE_LEAVES.get(), new Item.Properties()));
-	public static final DeferredItem<Item> APPLE_SAPLING = ITEMS.register("apple_sapling",
-			() -> new BlockItem(ExtraDelightBlocks.APPLE_SAPLING.get(), new Item.Properties()));
-
-	public static final DeferredItem<Item> ROMBOSSE = ITEMS.register("rombosse",
-			() -> new ToolTipConsumableItem(foodItem(EDFoods.ROMBOSSE), true));
-	public static final DeferredItem<Item> APPLE_SLAW = ITEMS.register("apple_slaw",
-			() -> new Item(stack16FoodItem(EDFoods.APPLE_SLAW)));
-	public static final DeferredItem<Item> PORK_AND_APPLES_FEAST = ITEMS.register("pork_and_apples_feast",
-			() -> new BlockItem(ExtraDelightBlocks.PORK_AND_APPLES_FEAST.get(), new Item.Properties()));
-	public static final DeferredItem<Item> PORK_AND_APPLES = ITEMS.register("pork_and_apples",
-			() -> new ToolTipConsumableItem(stack16FoodItem(EDFoods.PORK_AND_APPLES), true));
-	public static final DeferredItem<Item> APPLE_CHIPS = ITEMS.register("apple_chips",
-			() -> new Item(foodItem(EDFoods.APPLE_CHIPS)));
-	public static final DeferredItem<Item> STUFFED_APPLES_FEAST = ITEMS.register("stuffed_apples_feast",
-			() -> new BlockItem(ExtraDelightBlocks.STUFFED_APPLES_FEAST.get(), new Item.Properties()));
-	public static final DeferredItem<Item> STUFFED_APPLE = ITEMS.register("stuffed_apple",
-			() -> new ToolTipConsumableItem(stack16FoodItem(EDFoods.STUFFED_APPLE), true));
-	public static final DeferredItem<Item> STUFFED_APPLE_ICE_CREAM = ITEMS.register("stuffed_apple_ice_cream",
-			() -> new ToolTipConsumableItem(stack16FoodItem(EDFoods.STUFFED_APPLE_ICE_CREAM), true));
-	public static final DeferredItem<Item> MULLIGATAWNY_SOUP = ITEMS.register("mulligatawny_soup",
-			() -> new ToolTipConsumableItem(stack16FoodItem(EDFoods.MULLIGATAWNY_SOUP), true));
-
-	public static final DeferredItem<Item> TARTE_TATIN_IN_PAN = ITEMS.register("tarte_tatin_in_pan",
-			() -> new SolidBucketItem(ExtraDelightBlocks.TARTE_TATIN.get(), SoundEvents.DYE_USE,
-					new Item.Properties().stacksTo(1)) {
-				@Override
-				public InteractionResult useOn(UseOnContext context) {
-					InteractionResult interactionresult = super.useOn(context);
-					Player player = context.getPlayer();
-					if (interactionresult.consumesAction() && player != null) {
-						player.setItemInHand(context.getHand(), new ItemStack(ModItems.SKILLET.get()));
-					}
-
-					return interactionresult;
-				}
-			});
-
-	public static final DeferredItem<Item> TARTE_TATIN = ITEMS.register("tarte_tatin",
-			() -> new BlockItem(ExtraDelightBlocks.TARTE_TATIN.get(), new Item.Properties()));
-	public static final DeferredItem<Item> TARTE_TATIN_SLICE = ITEMS.register("tarte_tatin_slice",
-			() -> new ToolTipConsumableItem(foodItem(EDFoods.TARTE_TATIN_SLICE), true));
-	public static final DeferredItem<Item> AEBLEFLAESK = ITEMS.register("aebleflaesk",
-			() -> new ToolTipConsumableItem(stack16FoodItem(EDFoods.AEBLEFLAESK), true));
-	public static final DeferredItem<Item> CANDY_BAR_SALAD = ITEMS.register("candy_bar_salad",
-			() -> new ToolTipConsumableItem(stack16FoodItem(EDFoods.CANDY_BAR_SALAD), true));
 }

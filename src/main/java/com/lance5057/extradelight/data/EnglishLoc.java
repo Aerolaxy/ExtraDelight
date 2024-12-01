@@ -83,7 +83,6 @@ public class EnglishLoc extends LanguageProvider {
 		this.add("extradelight.jei.info.peanut", "Found in jungles.");
 		this.add("extradelight.jei.info.coffee", "Found in jungles.");
 		this.add("extradelight.jei.info.hazelnut", "Trees grow in forests.");
-		this.add("extradelight.jei.info.apple", "Trees grow in forests.");
 
 		this.add(ExtraDelight.MOD_ID + ".yeastpot.tooltip", "Use a bottle once the pot begins to bubble.");
 		this.add(ExtraDelight.MOD_ID + ".vinegarpot.tooltip", "Use a bottle once the pot begins to bubble.");
@@ -1157,24 +1156,6 @@ public class EnglishLoc extends LanguageProvider {
 		this.add(ExtraDelightItems.MALLOW_POWDER.get(), "Mallow Root Powder");
 		this.add(ExtraDelightItems.GROUND_COFFEE.get(), "Ground Coffee");
 		this.add(ExtraDelightItems.GOLDEN_CARROT_CRATE_BLOCK.get(), "Golden Carrot Crate");
-
-		this.add(ExtraDelightItems.APPLE_LEAVES.get(), "Apple Leaves");
-		this.add(ExtraDelightItems.APPLE_SAPLING.get(), "Apple Sapling");
-
-		this.add(ExtraDelightItems.ROMBOSSE.get(), "Rombosse");
-		this.add(ExtraDelightItems.APPLE_SLAW.get(), "Apple Slaw");
-		this.add(ExtraDelightItems.PORK_AND_APPLES_FEAST.get(), "Pork and Apples");
-		this.add(ExtraDelightItems.PORK_AND_APPLES.get(), "Bowl of Pork and Apples");
-		this.add(ExtraDelightItems.APPLE_CHIPS.get(), "Apple Chips");
-		this.add(ExtraDelightItems.STUFFED_APPLES_FEAST.get(), "Stuffed Apples");
-		this.add(ExtraDelightItems.STUFFED_APPLE.get(), "Stuffed Apple");
-		this.add(ExtraDelightItems.STUFFED_APPLE_ICE_CREAM.get(), "Stuffed Apple with Ice Cream");
-		this.add(ExtraDelightItems.MULLIGATAWNY_SOUP.get(), "Mulligatawny Soup");
-		this.add(ExtraDelightItems.TARTE_TATIN_IN_PAN.get(), "Tarte Tatin");
-		this.add(ExtraDelightItems.TARTE_TATIN.get(), "Tarte Tatin");
-		this.add(ExtraDelightItems.TARTE_TATIN_SLICE.get(), "Slice of Tarte Tatin");
-		this.add(ExtraDelightItems.AEBLEFLAESK.get(), "Æbleflæsk");
-		this.add(ExtraDelightItems.CANDY_BAR_SALAD.get(), "Candy Bar Salad");
 
 		AestheticBlocks.EngLoc(this);
 	}

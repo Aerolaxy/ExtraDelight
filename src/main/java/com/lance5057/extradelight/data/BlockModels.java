@@ -545,12 +545,6 @@ public class BlockModels extends BlockStateProvider {
 
 		this.simpleBlock(ExtraDelightBlocks.MARSHMALLOW_BLOCK.get());
 
-		this.vanillaFruitLeafBlock(ExtraDelightBlocks.APPLE_LEAVES.get(), "apple");
-		this.simpleCross(ExtraDelightBlocks.APPLE_SAPLING.get(), "crops/fruit/apple/apple_sapling");
-		this.recipeFeastBlock(ExtraDelightBlocks.PORK_AND_APPLES_FEAST.get());
-		this.recipeFeastBlock(ExtraDelightBlocks.STUFFED_APPLES_FEAST.get());
-		pieLikeBlock(ExtraDelightBlocks.TARTE_TATIN.get(), "tarte_tatin");
-
 		AestheticBlocks.blockModel(this);
 	}
 
@@ -664,7 +658,7 @@ public class BlockModels extends BlockStateProvider {
 			return ConfiguredModel.builder().modelFile(model).build();
 		});
 	}
-	
+
 	public void vanillaFruitLeafBlock(VanillaFruitLeafBlock block, String name) {
 		getVariantBuilder(block).forAllStates(state -> {
 			int age = state.getValue(VanillaFruitLeafBlock.AGE);

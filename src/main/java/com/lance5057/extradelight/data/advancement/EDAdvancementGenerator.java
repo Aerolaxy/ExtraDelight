@@ -377,8 +377,6 @@ public class EDAdvancementGenerator implements AdvancementProvider.AdvancementGe
 				.addCriterion("trail_mix",
 						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.TRAIL_MIX.get()))
 				.addCriterion("jerky", InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.JERKY.get()))
-				.addCriterion("apple_chips",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.APPLE_CHIPS.get()))
 				.requirements(AdvancementRequirements.Strategy.AND).save(consumer, ExtraDelight.MOD_ID + ":snacks");
 
 		AdvancementHolder feasts = Advancement.Builder.advancement()
@@ -498,10 +496,6 @@ public class EDAdvancementGenerator implements AdvancementProvider.AdvancementGe
 				.addCriterion("white_chocolate_fondue",
 						InventoryChangeTrigger.TriggerInstance
 								.hasItems(ExtraDelightItems.WHITE_CHOCOLATE_FONDUE_BLOCK.get()))
-				.addCriterion("stuffed_apples",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.STUFFED_APPLES_FEAST.get()))
-				.addCriterion("tarte",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.TARTE_TATIN_IN_PAN.get()))
 				.requirements(AdvancementRequirements.Strategy.AND).save(consumer, ExtraDelight.MOD_ID + ":feasts");
 
 		AdvancementHolder meals = Advancement.Builder.advancement()
@@ -701,10 +695,6 @@ public class EDAdvancementGenerator implements AdvancementProvider.AdvancementGe
 						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.FLUFFER_NUTTER.get()))
 				.addCriterion("pbj",
 						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.PEANUT_BUTTER_JELLY.get()))
-				.addCriterion("apple_slaw",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.APPLE_SLAW.get()))
-				.addCriterion("mulligatawny_soup",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.MULLIGATAWNY_SOUP.get()))
 				.requirements(AdvancementRequirements.Strategy.AND).save(consumer, ExtraDelight.MOD_ID + ":meals");
 
 		AdvancementHolder dessert = Advancement.Builder.advancement()
@@ -873,14 +863,6 @@ public class EDAdvancementGenerator implements AdvancementProvider.AdvancementGe
 						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.JELLY_MAGENTA.get()))
 				.addCriterion("pink_jelly",
 						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.JELLY_PINK.get()))
-				.addCriterion("rombosse",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.ROMBOSSE.get()))
-				.addCriterion("stuffed_apple",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.STUFFED_APPLE.get()))
-				.addCriterion("stuffed_apple_ice_cream",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.STUFFED_APPLE_ICE_CREAM.get()))
-				.addCriterion("tarte_tatin_slice",
-						InventoryChangeTrigger.TriggerInstance.hasItems(ExtraDelightItems.TARTE_TATIN_SLICE.get()))
 				.requirements(AdvancementRequirements.Strategy.AND).save(consumer, ExtraDelight.MOD_ID + ":desert");
 
 		AdvancementHolder ingredients = Advancement.Builder.advancement()
@@ -1443,12 +1425,6 @@ public class EDAdvancementGenerator implements AdvancementProvider.AdvancementGe
 				.addCriterion("BLOOD_CHOCOLATE_DIPPED_COFFEE_BEAN",
 						InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item()
 								.of(ExtraDelightItems.BLOOD_CHOCOLATE_DIPPED_COFFEE_BEAN).build()))
-				.addCriterion("PORK_AND_APPLES_FEAST",
-						InventoryChangeTrigger.TriggerInstance
-								.hasItems(ItemPredicate.Builder.item().of(ExtraDelightItems.PORK_AND_APPLES_FEAST).build()))
-				.addCriterion("PORK_AND_APPLES",
-						InventoryChangeTrigger.TriggerInstance
-								.hasItems(ItemPredicate.Builder.item().of(ExtraDelightItems.PORK_AND_APPLES).build()))
 				.requirements(AdvancementRequirements.Strategy.AND)
 				.save(consumer, ExtraDelight.MOD_ID + ":butcher");
 

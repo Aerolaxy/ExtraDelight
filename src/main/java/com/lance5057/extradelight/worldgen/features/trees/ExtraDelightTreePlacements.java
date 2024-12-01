@@ -18,8 +18,6 @@ public class ExtraDelightTreePlacements {
 			.createKey("cinnamon");
 	public static final ResourceKey<PlacedFeature> HAZELNUT_TREE_CHECKED = ExtraDelightTreePlacement
 			.createKey("hazelnut");
-	public static final ResourceKey<PlacedFeature> APPLE_TREE_CHECKED = ExtraDelightTreePlacement
-			.createKey("apple");
 
 	public static void bootstrap(BootstrapContext<PlacedFeature> context) {
 		HolderGetter<ConfiguredFeature<?, ?>> configuredFeatureGetter = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -28,16 +26,11 @@ public class ExtraDelightTreePlacements {
 				.getOrThrow(ExtraDelightTreeFeatures.CINNAMON);
 		final Holder<ConfiguredFeature<?, ?>> HAZELNUT_TREE = configuredFeatureGetter
 				.getOrThrow(ExtraDelightTreeFeatures.HAZELNUT);
-		final Holder<ConfiguredFeature<?, ?>> APPLE_TREE = configuredFeatureGetter
-				.getOrThrow(ExtraDelightTreeFeatures.APPLE);
 
 		context.register(CINNAMON_TREE_CHECKED, new PlacedFeature(CINNAMON_TREE,
 				List.of(PlacementUtils.filteredByBlockSurvival(ExtraDelightBlocks.CINNAMON_SAPLING.get()))));
 
 		context.register(HAZELNUT_TREE_CHECKED, new PlacedFeature(HAZELNUT_TREE,
 				List.of(PlacementUtils.filteredByBlockSurvival(ExtraDelightBlocks.HAZELNUT_SAPLING.get()))));
-
-		context.register(APPLE_TREE_CHECKED, new PlacedFeature(APPLE_TREE,
-				List.of(PlacementUtils.filteredByBlockSurvival(ExtraDelightBlocks.APPLE_SAPLING.get()))));
 	}
 }

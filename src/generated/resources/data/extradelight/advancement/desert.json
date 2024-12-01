@@ -551,16 +551,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "rombosse": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:rombosse"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "s'more": {
       "conditions": {
         "items": [
@@ -731,26 +721,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "stuffed_apple": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:stuffed_apple"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "stuffed_apple_ice_cream": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:stuffed_apple_ice_cream"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "sweet_berry_custard": {
       "conditions": {
         "items": [
@@ -786,16 +756,6 @@
         "items": [
           {
             "items": "extradelight:sweet_berry_popsicle"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "tarte_tatin_slice": {
-      "conditions": {
-        "items": [
-          {
-            "items": "extradelight:tarte_tatin_slice"
           }
         ]
       },
@@ -1069,18 +1029,6 @@
     ],
     [
       "pink_jelly"
-    ],
-    [
-      "rombosse"
-    ],
-    [
-      "stuffed_apple"
-    ],
-    [
-      "stuffed_apple_ice_cream"
-    ],
-    [
-      "tarte_tatin_slice"
     ]
   ],
   "sends_telemetry_event": true

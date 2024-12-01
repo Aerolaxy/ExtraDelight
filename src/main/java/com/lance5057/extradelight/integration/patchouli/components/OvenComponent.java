@@ -13,12 +13,9 @@
 //
 //import net.minecraft.client.Minecraft;
 //import net.minecraft.client.gui.GuiComponent;
-//import net.minecraft.client.gui.GuiGraphics;
-//import net.minecraft.core.HolderLookup.Provider;
 //import net.minecraft.resources.ResourceLocation;
 //import net.minecraft.world.item.crafting.Ingredient;
 //import net.minecraft.world.item.crafting.Recipe;
-//import net.minecraft.world.item.crafting.RecipeHolder;
 //import vazkii.patchouli.api.IComponentRenderContext;
 //import vazkii.patchouli.api.ICustomComponent;
 //import vazkii.patchouli.api.IVariable;
@@ -40,10 +37,10 @@
 //	}
 //
 //	protected List<Ingredient> makeIngredients() {
-//		List<RecipeHolder<OvenRecipe>> recipes = Minecraft.getInstance().level.getRecipeManager()
+//		List<OvenRecipe> recipes = Minecraft.getInstance().level.getRecipeManager()
 //				.getAllRecipesFor(ExtraDelightRecipes.OVEN.get());
 //
-//		RecipeHolder<OvenRecipe> recipe = recipes.stream().filter(r -> r.value()..getId().toString().equals(recipeName)).findFirst()
+//		Recipe<?> recipe = recipes.stream().filter(r -> r.getId().toString().equals(recipeName)).findFirst()
 //				.orElse(null);
 //		if (recipe == null) {
 //			return ImmutableList.of();
@@ -51,19 +48,13 @@
 //		return recipe.getIngredients();
 //	}
 //
-//
 //	@Override
-//	public void onVariablesAvailable(UnaryOperator<IVariable> lookup, Provider registries) {
-//		recipeName = lookup.apply(IVariable.wrap(recipeName)).asString();
-//	}
-//
-//	@Override
-//	public void render(GuiGraphics graphics, IComponentRenderContext context, float pticks, int mouseX, int mouseY) {
+//	public void render(PoseStack ms, IComponentRenderContext context, float pticks, int mouseX, int mouseY) {
 //		ms.pushPose();
 //
 //		RenderSystem.setShaderTexture(0, OVEN_GRID);
 //		RenderSystem.enableBlend();
-//		graphics.blit(ms, 22, 22, 0, 0, 76, 128, 256, 256);
+//		GuiComponent.blit(ms, 22, 22, 0, 0, 76, 128, 256, 256);
 //		
 //		int x = 0;
 //		int y = 0;
@@ -74,7 +65,7 @@
 //		int count = 0;
 //		for (Ingredient input : ingredients) {
 //			//ms.translate(x - (int) x, y - (int) y, 0);
-//			context.renderIngredient(graphics, xOff + x, yOff + y, mouseX, mouseY, input);
+//			context.renderIngredient(ms, xOff + x, yOff + y, mouseX, mouseY, input);
 //			x += size;
 //			if (x >= size * 3) {
 //				x = 0;
@@ -82,6 +73,11 @@
 //			}
 //		}
 //		ms.popPose();
+//	}
+//
+//	@Override
+//	public void onVariablesAvailable(UnaryOperator<IVariable> lookup) {
+//		recipeName = lookup.apply(IVariable.wrap(recipeName)).asString();
 //	}
 //
 //}

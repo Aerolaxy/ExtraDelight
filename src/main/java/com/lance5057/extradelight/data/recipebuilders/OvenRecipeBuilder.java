@@ -37,24 +37,21 @@ public class OvenRecipeBuilder implements RecipeBuilder {
 	private final int cookingTime;
 	private final float experience;
 	private final ItemStack container;
-	private final boolean consumeContainer;
 //	private final Advancement.Builder advancement = Advancement.Builder.advancement();
 	private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 
-	private OvenRecipeBuilder(ItemStack resultIn, int cookingTime, float experience, ItemStack container,
-			boolean consumeContainer) {
+	private OvenRecipeBuilder(ItemStack resultIn, int cookingTime, float experience, ItemStack container) {
 		this.result = resultIn.getItem();
 		this.resultStack = resultIn;
 		this.cookingTime = cookingTime;
 		this.experience = experience;
 		this.container = container;
 //		this.tab = null;
-		this.consumeContainer = consumeContainer;
 	}
 
 	public static OvenRecipeBuilder OvenRecipe(ItemStack mainResult, int cookingTime, float experience,
-			ItemStack container, boolean consumeContainer) {
-		return new OvenRecipeBuilder(mainResult, cookingTime, experience, container, consumeContainer);
+			ItemStack container) {
+		return new OvenRecipeBuilder(mainResult, cookingTime, experience, container);
 	}
 
 	public OvenRecipeBuilder addIngredient(TagKey<Item> tagIn) {
@@ -156,8 +153,9 @@ public class OvenRecipeBuilder implements RecipeBuilder {
 
 //		public OvenRecipe(String group, @Nullable OvenRecipeBookTab tab, NonNullList<Ingredient> inputItems,
 //				ItemStack output, ItemStack container, float experience, int cookTime) {
-		OvenRecipe recipe = new OvenRecipe("", /* this.tab, */ this.ingredients, this.resultStack, this.container,
-				this.experience, this.cookingTime, this.consumeContainer);
+		OvenRecipe recipe = new OvenRecipe("",
+				/* this.tab, */ this.ingredients, this.resultStack, this.container,
+				this.experience, this.cookingTime);
 		output.accept(recipeId, recipe, advancementBuilder.build(id.withPrefix("recipes/cooking/")));
 	}
 

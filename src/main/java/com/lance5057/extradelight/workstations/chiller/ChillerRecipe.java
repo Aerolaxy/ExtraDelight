@@ -30,7 +30,6 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 	private final ItemStack container;
 	private final float experience;
 	private final int cookTime;
-	public final boolean consumeContainer;
 
 	public ChillerRecipe(String group, NonNullList<Ingredient> inputItems, FluidStack inputFluid, ItemStack output,
 			ItemStack container, float experience, int cookTime) {
@@ -47,27 +46,7 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 
 		this.experience = experience;
 		this.cookTime = cookTime;
-		this.consumeContainer = false;
 	}
-
-	public ChillerRecipe(String group, NonNullList<Ingredient> inputItems, FluidStack inputFluid, ItemStack output,
-						 ItemStack container, float experience, int cookTime, boolean consumeContainer) {
-		this.group = group;
-		this.fluid = inputFluid;
-		this.inputItems = inputItems;
-		this.output = output;
-
-		if (!container.isEmpty()) {
-			this.container = container;
-		} else {
-			this.container = ItemStack.EMPTY;
-		}
-
-		this.experience = experience;
-		this.cookTime = cookTime;
-		this.consumeContainer = consumeContainer;
-	}
-
 
 	public ItemStack getContainerOverride() {
 		return this.container;
@@ -108,10 +87,6 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 
 	public int getCookTime() {
 		return this.cookTime;
-	}
-
-	public boolean shouldConsumeContainer() {
-		return this.consumeContainer;
 	}
 
 	@Override
@@ -176,10 +151,9 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 						ItemStack.CODEC.lenientOptionalFieldOf("container", ItemStack.EMPTY)
 								.forGetter(ChillerRecipe::getContainerOverride),
 						Codec.FLOAT.optionalFieldOf("experience", 0.0F).forGetter(ChillerRecipe::getExperience),
-						Codec.INT.lenientOptionalFieldOf("cookingtime", 200).forGetter(ChillerRecipe::getCookTime),
-						Codec.BOOL.fieldOf("consumeContainer").forGetter(ChillerRecipe::shouldConsumeContainer)
+						Codec.INT.lenientOptionalFieldOf("cookingtime", 200).forGetter(ChillerRecipe::getCookTime))
 
-				).apply(inst, ChillerRecipe::new));
+						.apply(inst, ChillerRecipe::new));
 
 		public static ChillerRecipe fromNetwork(RegistryFriendlyByteBuf buffer) {
 			String groupIn = buffer.readUtf();
@@ -196,9 +170,8 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 			ItemStack container = ItemStack.OPTIONAL_STREAM_CODEC.decode(buffer);
 			float experienceIn = buffer.readFloat();
 			int cookTimeIn = buffer.readVarInt();
-			boolean consumeContainer = buffer.readBoolean();
 			return new ChillerRecipe(groupIn, /* tabIn, */ inputItemsIn, fluid, outputIn, container, experienceIn,
-					cookTimeIn, consumeContainer);
+					cookTimeIn);
 		}
 
 		public static void toNetwork(RegistryFriendlyByteBuf buffer, ChillerRecipe recipe) {
@@ -216,7 +189,6 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 			ItemStack.OPTIONAL_STREAM_CODEC.encode(buffer, recipe.container);
 			buffer.writeFloat(recipe.experience);
 			buffer.writeVarInt(recipe.cookTime);
-			buffer.writeBoolean(recipe.consumeContainer);
 		}
 
 		@Override

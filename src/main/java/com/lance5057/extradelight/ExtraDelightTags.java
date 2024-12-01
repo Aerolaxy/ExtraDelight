@@ -443,6 +443,4 @@ public class ExtraDelightTags {
 	public static final TagKey<Item> CINNAMON_LOGS = neoforgeItemTag("cinnamon_logs");
 	public static final TagKey<Item> FRUIT_LOGS = neoforgeItemTag("fruit_logs");
 	public static final TagKey<Item> TOAST_OR_BREAD_SLICE = modTag("toast_or_bread_slice");
-
-	public static final TagKey<Item> CUSTARD = neoforgeItemTag("foods/custard");
 }

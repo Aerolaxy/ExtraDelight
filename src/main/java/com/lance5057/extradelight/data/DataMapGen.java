@@ -73,7 +73,6 @@ public class DataMapGen extends DataMapProvider {
 		compostables.add(ExtraDelightItems.WILD_GINGER.asItem().builtInRegistryHolder(), new Compostable(0.2f), false);
 		compostables.add(ExtraDelightItems.WILD_PEANUT_BLOCK.asItem().builtInRegistryHolder(), new Compostable(0.2f),
 				false);
-		compostables.add(ExtraDelightItems.APPLE_LEAVES.asItem().builtInRegistryHolder(), new Compostable(0.2f), false);
 	}
 
 }

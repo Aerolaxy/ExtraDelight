@@ -6,9 +6,9 @@
 		"2": "farmersdelight:item/cabbage_leaf",
 		"3": "extradelight:item/shredded_carrot",
 		"4": "extradelight:block/chefsalad",
-		"particle": "farmersdelight:item/cabbage_leaf",
 		"tray_top": "extradelight:block/bowl_top",
-		"tray_side": "farmersdelight:block/tray_bottom"
+		"tray_side": "farmersdelight:block/tray_bottom",
+		"particle": "farmersdelight:item/cabbage_leaf"
 	},
 	"elements": [
 		{
@@ -221,9 +221,9 @@
 		},
 		{
 			"name": "lettuce",
-			"from": [2.55025, 2.1, 5.12132],
-			"to": [9.55025, 2.1, 12.12132],
-			"rotation": {"angle": -45, "axis": "y", "origin": [8.17157, 2.1, 6.5]},
+			"from": [2.55025, 2, 5.12132],
+			"to": [9.55025, 2, 12.12132],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8.17157, 2, 6.5]},
 			"faces": {
 				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#2"},
 				"down": {"uv": [0, 0, 0, 0], "rotation": 180, "texture": "#2"}

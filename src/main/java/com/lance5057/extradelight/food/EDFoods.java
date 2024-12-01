@@ -241,14 +241,4 @@ public class EDFoods {
 	public static final FoodProperties HAZELNUT_SPREAD = new FoodProperties.Builder().nutrition(2).saturationModifier(0.55f).build();
 	public static final FoodProperties ROASTED_NUTS = new FoodProperties.Builder().nutrition(6).saturationModifier(1f).build();
 	public static final FoodProperties DIPPED_COFFEE_BEAN = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).effect(COMFORT_BRIEF, 1F).effect(SPEED_BRIEF, 1F).alwaysEdible().build();
-	public static final FoodProperties ROMBOSSE = new FoodProperties.Builder().nutrition(9).saturationModifier(0.45f).effect(COMFORT_MEDIUM, 1F).build();
-	public static final FoodProperties APPLE_SLAW = new FoodProperties.Builder().nutrition(7).saturationModifier(0.19f).usingConvertsTo(Items.BOWL).build();
-	public static final FoodProperties PORK_AND_APPLES = new FoodProperties.Builder().nutrition(9).saturationModifier(0.33f).effect(COMFORT_MEDIUM, 1F).effect(NOURISHMENT_MEDIUM, 1F).usingConvertsTo(Items.BOWL).build();
-	public static final FoodProperties APPLE_CHIPS = new FoodProperties.Builder().nutrition(1).saturationModifier(0.03f).build();
-	public static final FoodProperties STUFFED_APPLE = new FoodProperties.Builder().nutrition(4).saturationModifier(0.1f).effect(COMFORT_MEDIUM, 1F).usingConvertsTo(Items.BOWL).build();
-	public static final FoodProperties STUFFED_APPLE_ICE_CREAM = new FoodProperties.Builder().nutrition(12).saturationModifier(0.23f).effect(COMFORT_LONG, 1F).usingConvertsTo(Items.BOWL).build();
-	public static final FoodProperties MULLIGATAWNY_SOUP = new FoodProperties.Builder().nutrition(11).saturationModifier(0.21f).effect(COMFORT_MEDIUM, 1F).usingConvertsTo(Items.BOWL).build();
-	public static final FoodProperties TARTE_TATIN_SLICE = new FoodProperties.Builder().nutrition(5).saturationModifier(0.07f).effect(COMFORT_BRIEF, 1F).build();
-	public static final FoodProperties AEBLEFLAESK = new FoodProperties.Builder().nutrition(8).saturationModifier(0.27f).effect(NOURISHMENT_MEDIUM, 1F).build();
-	public static final FoodProperties CANDY_BAR_SALAD = new FoodProperties.Builder().nutrition(8).saturationModifier(0.31f).effect(COMFORT_MEDIUM, 1F).usingConvertsTo(Items.BOWL).build();
 }
